@@ -5,7 +5,7 @@ class JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.all
+    @jobs = Job.all.where(:is_hidden => false)
   end
 
   def new
